@@ -25,11 +25,15 @@
 }
 
 .hero-btn-wrapper {
-  @apply pt-6;
+  @apply pt-6 flex flex-wrap gap-4 justify-center lg:justify-start;
 }
 
 .hero-btn {
   @apply bg-emerald-400 text-[#0F172A] px-8 py-3 rounded font-bold hover:bg-emerald-300 transition-colors shadow-[0_0_15px_rgba(52,211,153,0.3)] inline-block;
+}
+
+.hero-btn-outline {
+  @apply border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded font-bold hover:bg-emerald-400/10 transition-colors inline-block;
 }
 
 .hero-image-container {

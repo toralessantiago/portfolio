@@ -68,7 +68,6 @@ export const Projects = () => {
             </div>
             
             <div className="project-links-wrapper">
-              {/* LINK GITHUB REAL */}
               <a href="https://github.com/EP-UnaHur-2026C1/anti-social-documental-tp-persistenciadeestrategia" target="_blank" rel="noopener noreferrer" className="project-link" title="Ver código en GitHub">
                 <FaGithub />
               </a>

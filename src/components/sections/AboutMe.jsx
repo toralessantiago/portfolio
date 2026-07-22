@@ -30,7 +30,6 @@ export const AboutMe = () => {
       
       <div className="about-content-grid">
         
-        {/* Tu historia y Soft Skills */}
         <div className="about-text-wrapper">
           <div className="about-paragraphs">
             <p>
@@ -52,8 +51,7 @@ export const AboutMe = () => {
               ))}
             </div>
           </div>
-        </div> {/* <--- ¡ESTE ES EL DIV QUE FALTABA CERRAR! */}
-        
+        </div> 
         {/* Hard Skills */}
         <div>
           <h4 className="skills-title">Hard Skills & Tecnologías</h4>
