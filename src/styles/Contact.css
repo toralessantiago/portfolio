@@ -1,0 +1,33 @@
+@reference "../index.css";
+
+.contact-section {
+  @apply min-h-[70vh] snap-start flex flex-col justify-center py-20 px-5 sm:px-8 md:px-20 max-w-5xl mx-auto w-full;
+}
+
+.contact-header {
+  @apply text-center mb-8 sm:mb-12;
+}
+
+.contact-title {
+  @apply text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6;
+}
+
+.contact-subtitle {
+  @apply text-slate-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg;
+}
+
+.contact-links-centered {
+  @apply flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-8;
+}
+
+.contact-card {
+  @apply flex flex-col items-center justify-center gap-2 sm:gap-4 bg-[#1E293B] p-3 sm:p-8 rounded-xl border border-slate-700 hover:border-emerald-400/50 hover:-translate-y-1 sm:hover:-translate-y-2 transition-all w-24 sm:w-40 md:w-56 text-slate-300 hover:text-emerald-400 shadow-lg cursor-pointer;
+}
+
+.contact-icon-wrapper {
+  @apply p-3 sm:p-5 bg-[#0F172A] rounded-full group-hover:bg-emerald-400/10 transition-colors;
+}
+
+.contact-text {
+  @apply font-semibold sm:font-bold text-[11px] sm:text-base md:text-lg tracking-wide;
+}

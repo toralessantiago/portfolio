@@ -1,0 +1,49 @@
+@reference "../index.css";
+
+.hero-section {
+  @apply min-h-screen snap-start pt-24 pb-12 px-5 sm:px-8 md:px-20 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between gap-12;
+}
+
+.hero-text-container {
+  @apply flex-1 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start;
+}
+
+.hero-greeting {
+  @apply text-emerald-400 font-mono tracking-wide;
+}
+
+.hero-title-main {
+  @apply text-4xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight;
+}
+
+.hero-title-sub {
+  @apply text-2xl sm:text-3xl md:text-5xl font-bold text-slate-500;
+}
+
+.hero-description {
+  @apply text-slate-400 max-w-lg text-base sm:text-lg leading-relaxed;
+}
+
+.hero-btn-wrapper {
+  @apply pt-6;
+}
+
+.hero-btn {
+  @apply bg-emerald-400 text-[#0F172A] px-8 py-3 rounded font-bold hover:bg-emerald-300 transition-colors shadow-[0_0_15px_rgba(52,211,153,0.3)] inline-block;
+}
+
+.hero-image-container {
+  @apply flex-1 flex justify-center relative w-full mt-8 lg:mt-0;
+}
+
+.hero-image-glow {
+  @apply absolute inset-0 bg-emerald-500 rounded-full blur-[100px] lg:blur-[120px] opacity-20;
+}
+
+.hero-image-wrapper {
+  @apply w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 border-2 border-emerald-400/50 rounded-full p-2 relative z-10 flex items-center justify-center bg-[#1E293B];
+}
+
+.hero-image-placeholder {
+  @apply text-slate-500 text-sm font-mono;
+}
