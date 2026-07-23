@@ -1,34 +1,92 @@
-import { motion } from 'framer-motion';
-import '../../styles/Hero.css';
+import { motion } from "framer-motion";
+import "../../styles/Hero.css";
 
-import fotoPerfil from '../../assets/imagen.jpeg'; 
-import cvPdf from '../../assets/cv.pdf'; 
+import fotoPerfil from "../../assets/imagen.jpeg";
+import cvPdf from "../../assets/cv.pdf";
 
 export const Hero = () => {
+  const descriptionParagraphs = [
+    "Desarrollador Full Stack apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
+
+    "Actualmente cursando la Tecnicatura en Programación en la UNAHUR, con fuerte enfoque en resolución de problemas, código limpio y buenas prácticas. Combino mis conocimientos de desarrollo con sólidos fundamentos en hardware, lo que me permite entender y optimizar el sistema en su totalidad.",
+  ];
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25,
+        delayChildren: 0.5,
+      },
+    },
+  };
+
+  const wordVariants = {
+    hidden: {
+      backgroundColor: "rgba(52, 211, 153, 0)",
+      color: "inherit",
+    },
+    visible: {
+      backgroundColor: [
+        "rgba(52, 211, 153, 0)",
+        "rgba(52, 211, 153, 0.4)",
+        "rgba(52, 211, 153, 0)",
+      ],
+      color: ["inherit", "#ffffff", "inherit"],
+      transition: {
+        duration: 0.5,
+        times: [0, 0.5, 1],
+      },
+    },
+  };
+
   return (
-    <motion.section 
-      id="hero" 
-      initial={{ opacity: 0, y: 50 }} 
-      whileInView={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.8 }} 
-      viewport={{ once: false, amount: 0.3 }} 
+    <motion.section
+      id="hero"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={sectionVariants}
       className="hero-section"
     >
       <div className="hero-text-container">
         <p className="hero-greeting">¡Hola! Mi nombre es</p>
-        
-        <h1 className="hero-title-main">
-          Santiago Torales.
-        </h1>
-        <h2 className="hero-title-sub">
-          Full Stack Developer.
-        </h2>
-        
-        <p className="hero-description">
-          Soy estudiante de la Tecnicatura en Programación en la UNAHUR y desarrollador de software. Me apasiona resolver problemas complejos con creatividad, abarcando desde el diseño de bases de datos y la lógica en el backend, hasta la construcción de interfaces modernas en el frontend. Como valor agregado, cuento con conocimientos técnicos en armado y reparación de hardware, lo que me otorga una comprensión integral de la tecnología, desde los componentes físicos hasta el código.
-        </p>
-        
-        <div className="hero-btn-wrapper">
+
+        <h1 className="hero-title-main">Santiago Torales.</h1>
+        <h2 className="hero-title-sub">Full Stack Developer.</h2>
+
+        {/* Contenedor de la descripción modificado para UI más limpia */}
+        {/* Contenedor de la descripción modificado para UI más limpia */}
+        <motion.div
+          className="hero-description flex flex-col gap-4 text-slate-300 max-w-2xl"
+          variants={paragraphVariants}
+        >
+          {descriptionParagraphs.map((paragraph, pIndex) => (
+            <p key={pIndex} style={{ lineHeight: "1.8" }}>
+              {paragraph.split(" ").map((word, wIndex) => (
+                <span key={`${pIndex}-${wIndex}`}>
+                  <motion.span
+                    variants={wordVariants}
+                    className="inline-block px-1 py-[2px] rounded-md"
+                  >
+                    {word}
+                  </motion.span>{" "}
+                </span>
+              ))}
+            </p>
+          ))}
+        </motion.div>
+
+        <div className="hero-btn-wrapper pt-4">
           <a href="#projects" className="hero-btn">
             Ver mis proyectos
           </a>
@@ -37,14 +95,14 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      
+
       <div className="hero-image-container">
         <div className="hero-image-glow"></div>
         <div className="hero-image-wrapper">
-          <img 
-            src={fotoPerfil} 
-            alt="Santiago Torales" 
-            className="w-full h-full object-cover rounded-full" 
+          <img
+            src={fotoPerfil}
+            alt="Santiago Torales"
+            className="w-full h-full object-cover rounded-full"
           />
         </div>
       </div>

@@ -4,7 +4,6 @@ import cvPdf from "../../assets/cv.pdf";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -29,15 +28,19 @@ export const NavBar = () => {
           <li className="hover:text-emerald-400 cursor-pointer transition-colors">
             <a href="#contact">Contacto</a>
           </li>
+          {/* Botón CV - Reconstruido con Tailwind puro para alineación perfecta */}
           <li>
-            <div className="hero-btn-wrapper">
-                <a href={cvPdf} download="cv.pdf" className="hero-btn-outline">
-                  Descargar CV
-                </a>
-              </div>
+            <a 
+              href={cvPdf} 
+              download="cv.pdf" 
+              className="inline-flex items-center justify-center px-5 py-2 border border-emerald-400 text-emerald-400 rounded hover:bg-emerald-400 hover:text-[#0F172A] transition-all duration-300 font-semibold"
+            >
+              Descargar CV
+            </a>
           </li>
         </ul>
 
+        {/* Botón Hamburguesa */}
         <button
           className="md:hidden text-slate-300 hover:text-emerald-400 text-3xl focus:outline-none transition-colors"
           onClick={toggleMenu}
@@ -46,30 +49,40 @@ export const NavBar = () => {
         </button>
       </div>
 
+      {/* Menú Móvil */}
       {isOpen && (
         <div className="md:hidden pt-4 pb-4 border-t border-slate-800 mt-4 transition-all duration-300">
-          <ul className="flex flex-col space-y-6 text-center text-base font-medium">
+          {/* Alineación a la izquierda con un poco de margen para respirar */}
+          <ul className="flex flex-col space-y-6 text-left pl-4 text-base font-medium">
             <li className="hover:text-emerald-400 transition-colors">
-              <a href="#hero" onClick={toggleMenu}>
+              <a href="#hero" onClick={toggleMenu} className="block w-full">
                 Inicio
               </a>
             </li>
             <li className="hover:text-emerald-400 transition-colors">
-              <a href="#about" onClick={toggleMenu}>
+              <a href="#about" onClick={toggleMenu} className="block w-full">
                 Sobre Mí
               </a>
             </li>
             <li className="hover:text-emerald-400 transition-colors">
-              <a href="#projects" onClick={toggleMenu}>
+              <a href="#projects" onClick={toggleMenu} className="block w-full">
                 Proyectos
               </a>
             </li>
             <li className="hover:text-emerald-400 transition-colors">
-              <a href="#contact" onClick={toggleMenu}>
+              <a href="#contact" onClick={toggleMenu} className="block w-full">
                 Contacto
               </a>
             </li>
-            <li className="pt-2">
+            <li className="pt-2 pr-4">
+              <a 
+                href={cvPdf} 
+                download="cv.pdf" 
+                className="flex items-center justify-center w-full py-3 border border-emerald-400 text-emerald-400 rounded hover:bg-emerald-400 hover:text-[#0F172A] transition-all duration-300"
+                onClick={toggleMenu}
+              >
+                Descargar CV
+              </a>
             </li>
           </ul>
         </div>
