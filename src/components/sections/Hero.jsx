@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import "../../styles/Hero.css";
 
 import fotoPerfil from "../../assets/imagen.jpeg";
-import cvPdf from "../../assets/cv.pdf";
+import cvPdf from "../../assets/Cv Torales Santiago.pdf";
 
 export const Hero = () => {
   const descriptionParagraphs = [
     "Desarrollador Full Stack apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
-
     "Actualmente cursando la Tecnicatura en Programación en la UNAHUR, con fuerte enfoque en resolución de problemas, código limpio y buenas prácticas. Combino mis conocimientos de desarrollo con sólidos fundamentos en hardware, lo que me permite entender y optimizar el sistema en su totalidad.",
   ];
   const sectionVariants = {
@@ -64,8 +63,6 @@ export const Hero = () => {
         <h1 className="hero-title-main">Santiago Torales.</h1>
         <h2 className="hero-title-sub">Full Stack Developer.</h2>
 
-        {/* Contenedor de la descripción modificado para UI más limpia */}
-        {/* Contenedor de la descripción modificado para UI más limpia */}
         <motion.div
           className="hero-description flex flex-col gap-4 text-slate-300 max-w-2xl"
           variants={paragraphVariants}
@@ -90,8 +87,13 @@ export const Hero = () => {
           <a href="#projects" className="hero-btn">
             Ver mis proyectos
           </a>
-          <a href={cvPdf} download="cv.pdf" className="hero-btn-outline">
-            Descargar CV
+          <a 
+            href={cvPdf} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hero-btn-outline"
+          >
+            Ver CV
           </a>
         </div>
       </div>
