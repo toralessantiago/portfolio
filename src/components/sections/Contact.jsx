@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import "../../styles/Contact.css"; 
+import "../../styles/Contact.css";
 
 export const Contact = () => {
   return (
@@ -13,18 +13,15 @@ export const Contact = () => {
       className="contact-section"
     >
       <div className="contact-header">
-        <h2 className="contact-title">
-          Ponte en contacto
-        </h2>
+        <h2 className="contact-title">Ponte en contacto</h2>
         <p className="contact-subtitle">
-          Actualmente estoy abierto a nuevas oportunidades. Ya sea para un
-          proyecto de desarrollo, una consulta técnica de hardware o simplemente
-          para saludar, ¡te responderé lo antes posible!
+          ## Ponte en contacto Estoy abierto a nuevas oportunidades. Si tenés un
+          proyecto de desarrollo, una consulta técnica o simplemente querés
+          charlar, no dudes en escribirme. ¡Te responderé pronto!
         </p>
       </div>
 
       <div className="contact-links-centered">
-        
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=toralessantiago885@gmail.com"
           target="_blank"
@@ -62,7 +59,6 @@ export const Contact = () => {
           </div>
           <span className="contact-text">WhatsApp</span>
         </a>
-
       </div>
     </motion.section>
   );
