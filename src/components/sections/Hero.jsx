@@ -9,6 +9,7 @@ export const Hero = () => {
     "Desarrollador Full Stack apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
     "Actualmente cursando la Tecnicatura en Programación en la UNAHUR, con fuerte enfoque en resolución de problemas, código limpio y buenas prácticas. Combino mis conocimientos de desarrollo con sólidos fundamentos en hardware, lo que me permite entender y optimizar el sistema en su totalidad.",
   ];
+
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -23,8 +24,8 @@ export const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.25,
-        delayChildren: 0.5,
+        staggerChildren: 0.15,
+        delayChildren: 1.2,
       },
     },
   };
