@@ -4,8 +4,8 @@ import { SiMongodb, SiExpress, SiJavascript, SiTypescript, SiVite, SiRedis } fro
 import '../../styles/Projects.css';
 
 import apexImg from '../../assets/apex-preview.jpg';
-// import antisocialApiImg from '../../assets/antisocial-api.jpg';
-// import antisocialWebImg from '../../assets/antisocial-web.jpg';
+import antisocialApiImg from '../../assets/antisocial-api.jpg';
+import antisocialWebImg from '../../assets/antisocial-web.jpg';
 
 export const Projects = () => {
   return (
@@ -69,7 +69,7 @@ export const Projects = () => {
           {/* BLOQUE DE IMAGEN */}
           <div className="relative w-full h-48 sm:h-56 overflow-hidden border-b border-slate-800">
             <img 
-              src="{antisocialApiImg}" 
+              src={antisocialApiImg}
               alt="Estructura de la API Anti-Social" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
             />
@@ -108,7 +108,7 @@ export const Projects = () => {
           {/* BLOQUE DE IMAGEN */}
           <div className="relative w-full h-48 sm:h-56 overflow-hidden border-b border-slate-800">
             <img 
-              src="{antisocialWebImg}" 
+              src={antisocialWebImg}
               alt="Interfaz Web de Anti-Social" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
             />
