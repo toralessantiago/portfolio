@@ -132,7 +132,7 @@ export const Projects = () => {
               </div>
               
               <div className="project-links-wrapper">
-                <a href="https://toralessantiago.github.io/antisocialnet-frontend/#/" target="_blank" rel="noopener noreferrer" className="project-link" title="Visitar sitio web">
+                <a href="https://antisocial-net-frontend-five.vercel.app/" target="_blank" rel="noopener noreferrer" className="project-link" title="Visitar sitio web">
                   <FaExternalLinkAlt className="text-[1.2rem]" />
                 </a>
                 <a href="https://github.com/toralessantiago/antisocial-net-frontend.git" target="_blank" rel="noopener noreferrer" className="project-link" title="Ver código en GitHub">
