@@ -24,8 +24,8 @@ export const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 1.2,
+        staggerChildren: 0.08, 
+        delayChildren: 0.3,   
       },
     },
   };
