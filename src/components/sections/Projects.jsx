@@ -31,9 +31,9 @@ export const Projects = () => {
             <img 
               src={apexImg}
               alt="Vista previa de Apex Store" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0F172A]/40 transition-colors duration-500 group-hover:bg-transparent"></div>
+            <div className="absolute inset-0 bg-transparent"></div>
           </div>
 
           <div className="p-6 flex flex-col flex-grow justify-between">
@@ -71,9 +71,9 @@ export const Projects = () => {
             <img 
               src={antisocialApiImg}
               alt="Estructura de la API Anti-Social" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0F172A]/40 transition-colors duration-500 group-hover:bg-transparent"></div>
+            <div className="absolute inset-0 bg-transparent"></div>
           </div>
 
           <div className="p-6 flex flex-col flex-grow justify-between">
@@ -110,9 +110,9 @@ export const Projects = () => {
             <img 
               src={antisocialWebImg}
               alt="Interfaz Web de Anti-Social" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[#0F172A]/40 transition-colors duration-500 group-hover:bg-transparent"></div>
+            <div className="absolute inset-0 bg-transparent"></div>
           </div>
 
           <div className="p-6 flex flex-col flex-grow justify-between">
