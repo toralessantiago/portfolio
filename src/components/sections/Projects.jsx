@@ -117,8 +117,8 @@ export const Projects = () => {
 
           <div className="p-6 flex flex-col flex-grow justify-between">
             <div>
-              <h4 className="project-tag">Frontend SPA</h4>
-              <h3 className="project-name">UnaHur Anti-Social (Web)</h3>
+              <h4 className="project-tag">Aplicación Web Full Stack</h4>
+              <h3 className="project-name">UnaHur Anti-Social</h3>
               <p className="project-description">
                 Cliente web de la red social integrado con la API REST. Incluye autenticación de usuarios, feed de publicaciones, sistema de comentarios, carga de imágenes y un toggle para modo oscuro/claro.
               </p>
