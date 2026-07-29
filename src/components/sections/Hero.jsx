@@ -62,7 +62,7 @@ export const Hero = () => {
         <p className="hero-greeting">¡Hola! Mi nombre es</p>
 
         <h1 className="hero-title-main">Santiago Torales.</h1>
-        <h2 className="hero-title-sub">Full Stack Developer.</h2>
+        <h2 className="hero-title-sub">Web Developer Full Stack.</h2>
 
         <motion.div
           className="hero-description flex flex-col gap-4 text-slate-300 max-w-2xl"
