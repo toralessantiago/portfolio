@@ -120,7 +120,7 @@ export const Projects = () => {
               <h4 className="project-tag">Aplicación Web Full Stack</h4>
               <h3 className="project-name">UnaHur Anti-Social</h3>
               <p className="project-description">
-                Cliente web de la red social integrado con la API REST. Incluye autenticación de usuarios, feed de publicaciones, sistema de comentarios, carga de imágenes y un toggle para modo oscuro/claro.
+                Cliente web de la red social integrado con la API REST. Incluye autenticación de usuarios, feed de publicaciones, sistema de comentarios, likes y seguidores, carga de imágenes y un toggle para modo oscuro/claro.
               </p>
             </div>
             <div className="project-footer mt-4">
