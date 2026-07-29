@@ -15,9 +15,8 @@ export const Contact = () => {
       <div className="contact-header">
         <h2 className="contact-title">Ponte en contacto</h2>
         <p className="contact-subtitle">
-          ## Ponte en contacto Estoy abierto a nuevas oportunidades. Si tenés un
-          proyecto de desarrollo, una consulta técnica o simplemente querés
-          charlar, no dudes en escribirme. ¡Te responderé pronto!
+          Estoy abierto a nuevas oportunidades. Si tenés un
+          proyecto de desarrollo o una consulta, no dudes en escribirme!
         </p>
       </div>
 
