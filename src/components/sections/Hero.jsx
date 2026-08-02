@@ -6,7 +6,7 @@ import cvPdf from "../../assets/Cv Torales Santiago.pdf";
 
 export const Hero = () => {
   const descriptionParagraphs = [
-    "Web Developer Jr apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
+    "Apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
     "Actualmente cursando la Tecnicatura en Programación en la UNAHUR, con fuerte enfoque en resolución de problemas, código limpio y buenas prácticas. Combino mis conocimientos de desarrollo con sólidos fundamentos en hardware, lo que me permite entender y optimizar el sistema en su totalidad.",
   ];
 
@@ -62,7 +62,7 @@ export const Hero = () => {
         <p className="hero-greeting">¡Hola! Mi nombre es</p>
 
         <h1 className="hero-title-main">Santiago Torales.</h1>
-        <h2 className="hero-title-sub">Web Developer Full Stack.</h2>
+        <h2 className="hero-title-sub">Web Developer Jr.</h2>
 
         <motion.div
           className="hero-description flex flex-col gap-4 text-slate-300 max-w-2xl"
