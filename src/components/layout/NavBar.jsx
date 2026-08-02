@@ -28,7 +28,6 @@ export const NavBar = () => {
           <li className="hover:text-emerald-400 cursor-pointer transition-colors">
             <a href="#contact">Contacto</a>
           </li>
-          {/* Botón Ver CV - Modificado para abrir en nueva pestaña */}
           <li>
             <a 
               href={cvPdf} 
@@ -41,7 +40,6 @@ export const NavBar = () => {
           </li>
         </ul>
 
-        {/* Botón Hamburguesa */}
         <button
           className="md:hidden text-slate-300 hover:text-emerald-400 text-3xl focus:outline-none transition-colors"
           onClick={toggleMenu}
@@ -50,7 +48,6 @@ export const NavBar = () => {
         </button>
       </div>
 
-      {/* Menú Móvil */}
       {isOpen && (
         <div className="md:hidden pt-4 pb-4 border-t border-slate-800 mt-4 transition-all duration-300">
           <ul className="flex flex-col space-y-6 text-left pl-4 text-base font-medium">
