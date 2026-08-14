@@ -1,40 +1,28 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext";
 import "../../styles/Hero.css";
-
 import fotoPerfil from "../../assets/imagen.jpeg";
 import cvPdf from "../../assets/Cv Torales Santiago.pdf";
+import cvPdfEN from "../../assets/Cv Torales Santiago 1 EN.pdf";
 
 export const Hero = () => {
-  const descriptionParagraphs = [
-    "Apasionado por construir aplicaciones web completas, desde el diseño de bases de datos y arquitecturas backend escalables hasta interfaces de usuario intuitivas y atractivas.",
-    "Actualmente cursando la Tecnicatura en Programación en la UNAHUR, con fuerte enfoque en resolución de problemas, código limpio y buenas prácticas. Combino mis conocimientos de desarrollo con sólidos fundamentos en hardware, lo que me permite entender y optimizar el sistema en su totalidad.",
-  ];
+  const { language, t } = useLanguage();
+
+  const descriptionParagraphs = [t.hero_desc1, t.hero_desc2];
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
-
   const paragraphVariants = {
     hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.25, 
-        delayChildren: 3.5,   
-      },
+      transition: { staggerChildren: 0.25, delayChildren: 3.5 },
     },
   };
-
   const wordVariants = {
-    hidden: {
-      backgroundColor: "rgba(52, 211, 153, 0)",
-      color: "inherit",
-    },
+    hidden: { backgroundColor: "rgba(52, 211, 153, 0)", color: "inherit" },
     visible: {
       backgroundColor: [
         "rgba(52, 211, 153, 0)",
@@ -42,12 +30,11 @@ export const Hero = () => {
         "rgba(52, 211, 153, 0)",
       ],
       color: ["inherit", "#ffffff", "inherit"],
-      transition: {
-        duration: 0.5,
-        times: [0, 0.5, 1],
-      },
+      transition: { duration: 0.5, times: [0, 0.5, 1] },
     },
   };
+
+  const currentCv = language === "es" ? cvPdf : cvPdfEN;
 
   return (
     <motion.section
@@ -59,10 +46,10 @@ export const Hero = () => {
       className="hero-section"
     >
       <div className="hero-text-container">
-        <p className="hero-greeting">¡Hola! Mi nombre es</p>
+        <p className="hero-greeting">{t.hero_greeting}</p>
 
         <h1 className="hero-title-main">Santiago Torales.</h1>
-        <h2 className="hero-title-sub">Web Developer Jr.</h2>
+        <h2 className="hero-title-sub">{t.hero_sub}</h2>
 
         <motion.div
           className="hero-description flex flex-col gap-4 text-slate-300 max-w-2xl"
@@ -86,15 +73,15 @@ export const Hero = () => {
 
         <div className="hero-btn-wrapper pt-4">
           <a href="#projects" className="hero-btn">
-            Ver mis proyectos
+            {t.hero_btn_projects}
           </a>
-          <a 
-            href={cvPdf} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href={currentCv}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hero-btn-outline"
           >
-            Ver CV
+            {t.hero_btn_cv}
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaReact, FaNodeJs, FaBootstrap, FaDocker, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiJavascript, SiTypescript, SiVite, SiRedis } from 'react-icons/si';
+import { useLanguage } from "../../context/LanguageContext";
 import '../../styles/Projects.css';
 
 import apexImg from '../../assets/apex-preview.jpg';
@@ -8,6 +9,8 @@ import antisocialApiImg from '../../assets/antisocial-api.jpg';
 import antisocialWebImg from '../../assets/antisocial-web.jpg';
 
 export const Projects = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.section 
       id="projects" 
@@ -18,7 +21,7 @@ export const Projects = () => {
       className="projects-section"
     >
       <div className="projects-header">
-        <h3 className="projects-title">Proyectos Destacados</h3>
+        <h3 className="projects-title">{t.projects_title}</h3>
         <div className="projects-divider"></div>
       </div>
 
@@ -38,10 +41,10 @@ export const Projects = () => {
 
           <div className="p-6 flex flex-col flex-grow justify-between">
             <div>
-              <h4 className="project-tag">E-Commerce Web</h4>
+              <h4 className="project-tag">{t.proj1_tag}</h4>
               <h3 className="project-name">Apex Store</h3>
               <p className="project-description">
-                SPA desarrollada en React que simula una tienda online de indumentaria. Cuenta con catálogo dinámico, sistema de carrito con persistencia en LocalStorage, filtros cruzados y simulador de checkout.
+                {t.proj1_desc}
               </p>
             </div>
             <div className="project-footer mt-4">
@@ -66,7 +69,6 @@ export const Projects = () => {
         {/* Proyecto 2: Backend Anti-Social */}
         <div className="project-card flex flex-col overflow-hidden group">
           
-          {/* BLOQUE DE IMAGEN */}
           <div className="relative w-full h-48 sm:h-56 overflow-hidden border-b border-slate-800">
             <img 
               src={antisocialApiImg}
@@ -78,10 +80,10 @@ export const Projects = () => {
 
           <div className="p-6 flex flex-col flex-grow justify-between">
             <div>
-              <h4 className="project-tag">Backend & API REST</h4>
+              <h4 className="project-tag">{t.proj2_tag}</h4>
               <h3 className="project-name">UnaHur Anti-Social (API)</h3>
               <p className="project-description">
-                API robusta para red social con arquitectura documental NoSQL. Gestiona usuarios, posteos e imágenes embebidas. Implementa una capa de caché en memoria para optimizar consultas frecuentes.
+                {t.proj2_desc}
               </p>
             </div>
             <div className="project-footer mt-4">
@@ -105,7 +107,6 @@ export const Projects = () => {
         {/* Proyecto 3: Frontend Anti-Social */}
         <div className="project-card flex flex-col overflow-hidden group">
           
-          {/* BLOQUE DE IMAGEN */}
           <div className="relative w-full h-48 sm:h-56 overflow-hidden border-b border-slate-800">
             <img 
               src={antisocialWebImg}
@@ -117,10 +118,10 @@ export const Projects = () => {
 
           <div className="p-6 flex flex-col flex-grow justify-between">
             <div>
-              <h4 className="project-tag">Aplicación Web Full Stack</h4>
+              <h4 className="project-tag">{t.proj3_tag}</h4>
               <h3 className="project-name">UnaHur Anti-Social</h3>
               <p className="project-description">
-                Cliente web de la red social integrado con la API REST. Incluye autenticación de usuarios, feed de publicaciones, sistema de comentarios, likes, seguidores, carga de imágenes y un toggle para modo oscuro/claro.
+                {t.proj3_desc}
               </p>
             </div>
             <div className="project-footer mt-4">

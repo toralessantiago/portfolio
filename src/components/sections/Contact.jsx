@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext"; 
 import "../../styles/Contact.css";
 
 export const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.section
       id="contact"
@@ -13,10 +16,9 @@ export const Contact = () => {
       className="contact-section"
     >
       <div className="contact-header">
-        <h2 className="contact-title">Ponte en contacto</h2>
+        <h2 className="contact-title">{t.contact_title}</h2>
         <p className="contact-subtitle">
-          Estoy abierto a nuevas oportunidades. Si tenés un
-          proyecto de desarrollo o una consulta, no dudes en escribirme!
+          {t.contact_subtitle}
         </p>
       </div>
 
@@ -30,7 +32,7 @@ export const Contact = () => {
           <div className="contact-icon-wrapper">
             <FaEnvelope className="text-xl sm:text-4xl" />
           </div>
-          <span className="contact-text">Gmail</span>
+          <span className="contact-text">{t.contact_gmail}</span>
         </a>
 
         {/* LinkedIn */}
@@ -43,7 +45,7 @@ export const Contact = () => {
           <div className="contact-icon-wrapper">
             <FaLinkedin className="text-xl sm:text-4xl" />
           </div>
-          <span className="contact-text">LinkedIn</span>
+          <span className="contact-text">{t.contact_linkedin}</span>
         </a>
 
         {/* WhatsApp */}
@@ -56,7 +58,7 @@ export const Contact = () => {
           <div className="contact-icon-wrapper">
             <FaWhatsapp className="text-xl sm:text-4xl" />
           </div>
-          <span className="contact-text">WhatsApp</span>
+          <span className="contact-text">{t.contact_whatsapp}</span>
         </a>
       </div>
     </motion.section>
