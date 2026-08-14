@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useLanguage } from "../../context/LanguageContext";
 import cvPdf from "../../assets/Cv Torales Santiago.pdf";
-import cvPdfEN from "../../assets/Cv Torales Santiago 1 EN.pdf";
+import cvPdfEN from "../../assets/cv-en.pdf";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

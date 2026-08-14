@@ -3,7 +3,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import "../../styles/Hero.css";
 import fotoPerfil from "../../assets/imagen.jpeg";
 import cvPdf from "../../assets/Cv Torales Santiago.pdf";
-import cvPdfEN from "../../assets/Cv Torales Santiago 1 EN.pdf";
+import cvPdfEN from "../../assets/cv-en.pdf";
 
 export const Hero = () => {
   const { language, t } = useLanguage();
